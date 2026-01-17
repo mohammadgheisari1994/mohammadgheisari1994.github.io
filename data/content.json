@@ -65,7 +65,7 @@
   "sections": {
     "summary": {
       "title": "Personal Profile",
-      "text": "Computer Vision / ML Engineer with a Statistics-to-Data Science background, focused on industrial thermography and real-time defect detection. Experienced across the full ML lifecycle (data validation, model development, evaluation, and deployment-ready inference), including customer-site local model setup/adaptation for new environments. Led a 3-6 person AI team and delivered customer-facing demos that enabled faster quality screening and reduced reliance on secondary inspections."
+      "text": "Built real-time defect-detection systems for industrial thermography, spanning data validation, model development, and edge-ready inference. I bridge applied CV with production constraints, delivering on-site deployments, customer demos, and measurable inspection gains. Recently led a 3-6 person AI team while shipping both real-time and post-processing models for field use."
     },
     "skills": {
       "title": "Skills",
