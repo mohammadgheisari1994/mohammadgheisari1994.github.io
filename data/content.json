@@ -156,52 +156,52 @@
           "title": "Chief Technology Officer (AI & Data)",
           "company": "Therness S.r.l",
           "location": "Turin, Italy",
-          "date": "2025 - Present",
+          "date": "Sep 2025 - Jan 2026",
           "bullets": [
-            "Owned the AI/Data roadmap for an industrial defect-detection product; drove customer demos and defined measurable acceptance criteria, including on-site adaptation when needed.",
-            "Shipped 2 real-time and 3 post-processing models for thermal-video welding defect detection; post-processing models required no on-site training; real-time rollout enabled rapid local setup (~30 min / <1 min).",
-            "Deployed on a GPU-powered edge device for on-prem inference (and optional on-site adaptation); built the service layer in Django and integrated with the frontend via WebSocket.",
-            "Built and led a cross-functional team (3-6; ML/CV + software) and drove delivery for customer deployments and demos."
+            "Owned the AI/data roadmap for thermographic defect detection, turning customer requirements into measurable acceptance criteria.",
+            "Shipped 2 real-time and 3 post-processing models for thermal-video welding defects; enabled on-site setup in ~30 minutes and updates in <1 minute.",
+            "Deployed GPU edge inference with a Django service layer and WebSocket integration for the customer-facing UI.",
+            "Led a 3-6 person ML/CV + software team and ran customer demos through production handoff."
           ]
         },
         {
           "title": "R&D Scientist (Computer Vision)",
           "company": "Therness S.r.l",
           "location": "Turin, Italy",
-          "date": "2024 - 2025",
+          "date": "Sep 2024 - Aug 2025",
           "bullets": [
-            "Developed thermography-based welding defect detection prototypes, including one-shot/low-data learning for limited labels.",
-            "Built data validation, preprocessing, and error-analysis workflow for robust performance on real thermal video runs."
+            "Built thermography-based defect detection prototypes, including one-shot/low-data approaches for sparse labeling.",
+            "Designed validation, preprocessing, and error-analysis workflows for robust performance on real thermal runs."
           ]
         },
         {
           "title": "Algorithm Development for Weld Path Optimization | Data Scientist Intern",
           "company": "Ades Consulting & Service Srl",
           "location": "Turin, Italy",
-          "date": "2024 - 2025",
+          "date": "Jul 2024 - Sep 2024",
           "bullets": [
-            "Built an STL mesh processing and path planning pipeline for robotic welding; achieved ~86% path match rate vs reference trajectories on an internal evaluation set.",
-            "Developed visualization and debugging tooling to speed up iteration cycles and stakeholder review."
+            "Built an STL mesh processing and robotic weld path planning pipeline; achieved ~86% match vs reference trajectories.",
+            "Created visualization and debugging tooling to speed iteration and stakeholder reviews."
           ]
         },
         {
           "title": "Statistical Analyst (Market Research)",
           "company": "Shomal Market Insights",
           "location": "Karaj, Iran",
-          "date": "2019 - 2020",
+          "date": "Jun 2019 - May 2020",
           "bullets": [
-            "Analyzed survey datasets for client studies, delivering segmentation insights and statistical testing results through concise reports for decision support.",
-            "Improved data processing workflows by optimizing performance-critical steps in C++, speeding analysis on larger datasets and increasing reliability."
+            "Led survey analysis for market research studies, delivering segmentation insights and statistical testing reports.",
+            "Optimized data-processing steps in C++ to improve reliability and reduce runtime on larger datasets."
           ]
         },
         {
           "title": "Data Analyst Intern",
           "company": "Engineering Department, University of Hormozgan",
           "location": "Bandar Abbas, Iran",
-          "date": "2016 - 2017",
+          "date": "Sep 2016 - Sep 2017",
           "bullets": [
-            "Analyzed 5,000+ records across 10 years to identify drivers of post-graduation employment outcomes.",
-            "Delivered interventions validated by simulation (+8.0%) and observed post-implementation improvement (+8.4%)."
+            "Analyzed 5,000+ student records across 10 years to identify drivers of employment outcomes.",
+            "Recommended interventions validated by simulation (+8.0%) and post-implementation improvement (+8.4%)."
           ]
         }
       ]
