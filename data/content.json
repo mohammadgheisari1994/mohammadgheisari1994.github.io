@@ -60,6 +60,7 @@
     "projects",
     "education",
     "certificates",
+    "interests",
     "languages"
   ],
   "sections": {
@@ -358,6 +359,31 @@
         {
           "language": "Italian",
           "level": "A2"
+        }
+      ]
+    },
+    "interests": {
+      "title": "Interests",
+      "items": [
+        {
+          "title": "Productivity & Personal Growth",
+          "description": "Listening to podcasts on productivity and personal development.",
+          "icon": "fas fa-headphones"
+        },
+        {
+          "title": "Reading",
+          "description": "Books on technology, decision-making, and long-term learning.",
+          "icon": "fas fa-book-open"
+        },
+        {
+          "title": "Football",
+          "description": "Watching matches and playing whenever possible.",
+          "icon": "fas fa-futbol"
+        },
+        {
+          "title": "City Cycling",
+          "description": "Prefer cycling around the city for daily commutes.",
+          "icon": "fas fa-person-biking"
         }
       ]
     }
