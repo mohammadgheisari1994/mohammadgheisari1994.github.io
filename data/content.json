@@ -3,7 +3,7 @@
     "firstName": "Mohammadmahdi",
     "lastName": "Gheisari",
     "fullName": "Mohammadmahdi Gheisari",
-    "role": "Computer Vision / ML Engineer | Real-time Inference | Industrial Inspection",
+    "role": "Applied AI Engineer",
     "contacts": [
       {
         "type": "phone",
@@ -18,16 +18,16 @@
         "url": "mailto:m.gheisari1994@gmail.com"
       },
       {
-        "type": "github",
-        "label": "mohammadgheisari1994",
-        "value": "mohammadgheisari1994",
-        "url": "https://github.com/mohammadgheisari1994"
-      },
-      {
         "type": "linkedin",
         "label": "m-gheisari-h",
         "value": "m-gheisari-h",
         "url": "https://linkedin.com/in/m-gheisari-h"
+      },
+      {
+        "type": "github",
+        "label": "mohammadgheisari1994",
+        "value": "mohammadgheisari1994",
+        "url": "https://github.com/mohammadgheisari1994"
       }
     ]
   },
