@@ -213,8 +213,9 @@
           "subtitle": "In collaboration with Therness S.r.l.",
           "date": "Sep 2024 - Expected Mar 2026",
           "bullets": [
-            "Built a thermographic analysis workflow and developed ML/DL models for welding defect detection and in-process quality monitoring.",
-            "Designed CV preprocessing and real-time inference approach for deployment on an on-prem edge device. (Code/data not public due to company confidentiality.)"
+            "Built a thermographic analysis workflow and ML/DL models for welding defect detection and in-process monitoring.",
+            "Designed CV preprocessing plus real-time inference for deployment on an on-prem edge device (confidential data/code).",
+            "Added a lightweight QA checklist for thermal data drift before each model run."
           ]
         },
         {
@@ -223,8 +224,9 @@
           "subtitle": "",
           "date": "Mar 2024 - Sep 2024",
           "bullets": [
-            "Implemented and benchmarked distributed/federated training, evaluating accuracy, scalability, and communication cost across client settings.",
-            "Prototyped efficiency techniques (layer freezing, adaptive local steps) for heterogeneous clients."
+            "Implemented and benchmarked distributed/federated training on CIFAR-100, tracking accuracy vs communication cost.",
+            "Prototyped efficiency tactics like layer freezing and adaptive local steps for heterogeneous clients.",
+            "Documented a simple reproducibility recipe to compare runs across machines."
           ]
         },
         {
@@ -233,9 +235,9 @@
           "subtitle": "",
           "date": "Sep 2023 - Jan 2024",
           "bullets": [
-            "Developed a voice intent detection model using NLP and supervised learning for accurate intent classification on voice assistants.",
-            "Optimized the model for edge deployment by reducing size and improving latency on resource-constrained IoT devices.",
-            "Tech: Python, NLP, intent classification, edge deployment."
+            "Developed a voice intent model using NLP + supervised learning for edge-grade assistants.",
+            "Optimized latency and footprint for resource-constrained IoT devices.",
+            "Tested quantization-friendly architectures to keep accuracy stable on device."
           ]
         },
         {
@@ -244,9 +246,9 @@
           "subtitle": "",
           "date": "Oct 2022 - Feb 2023",
           "bullets": [
-            "Built and validated regression models using meteorological covariates to forecast weekly dengue cases.",
-            "Produced interpretable insights on climate drivers to support early-warning analysis and public health planning.",
-            "Tech: regression, feature engineering, model validation (Python/R)."
+            "Built and validated regression models to forecast weekly dengue cases from meteorological signals.",
+            "Produced interpretable insights on climate drivers for early-warning analysis.",
+            "Created a small reporting template to communicate uncertainty to non-technical stakeholders."
           ]
         }
       ]
