@@ -158,10 +158,8 @@
           "location": "Turin, Italy",
           "date": "Sep 2025 - Jan 2026",
           "bullets": [
-            "Owned the AI/data roadmap for thermographic defect detection, turning customer requirements into measurable acceptance criteria.",
-            "Shipped 2 real-time and 3 post-processing models for thermal-video welding defects; enabled on-site setup in ~30 minutes and updates in <1 minute.",
-            "Deployed GPU edge inference with a Django service layer and WebSocket integration for the customer-facing UI.",
-            "Led a 3-6 person ML/CV + software team and ran customer demos through production handoff."
+            "Drove AI/data delivery for thermographic defect detection, translating customer needs into acceptance criteria and demos.",
+            "Delivered 2 real-time + 3 post-processing models on GPU edge with Django/WebSocket service integration and rapid on-site setup."
           ]
         },
         {
@@ -170,8 +168,8 @@
           "location": "Turin, Italy",
           "date": "Sep 2024 - Aug 2025",
           "bullets": [
-            "Built thermography-based defect detection prototypes, including one-shot/low-data approaches for sparse labeling.",
-            "Designed validation, preprocessing, and error-analysis workflows for robust performance on real thermal runs."
+            "Prototyped thermography-based defect detection with one-shot/low-label methods for sparse data.",
+            "Built the validation + error-analysis pipeline used to harden models on real thermal runs."
           ]
         },
         {
@@ -180,8 +178,8 @@
           "location": "Turin, Italy",
           "date": "Jul 2024 - Sep 2024",
           "bullets": [
-            "Built an STL mesh processing and robotic weld path planning pipeline; achieved ~86% match vs reference trajectories.",
-            "Created visualization and debugging tooling to speed iteration and stakeholder reviews."
+            "Built STL mesh processing and robotic weld path planning; reached ~86% match vs reference trajectories.",
+            "Shipped visualization/debug tooling that shortened iteration and review cycles."
           ]
         },
         {
@@ -190,8 +188,8 @@
           "location": "Karaj, Iran",
           "date": "Jun 2019 - May 2020",
           "bullets": [
-            "Led survey analysis for market research studies, delivering segmentation insights and statistical testing reports.",
-            "Optimized data-processing steps in C++ to improve reliability and reduce runtime on larger datasets."
+            "Delivered market-research insights via segmentation and statistical testing reports.",
+            "Optimized C++ data-processing steps to improve runtime and reliability."
           ]
         },
         {
@@ -200,8 +198,8 @@
           "location": "Bandar Abbas, Iran",
           "date": "Sep 2016 - Sep 2017",
           "bullets": [
-            "Analyzed 5,000+ student records across 10 years to identify drivers of employment outcomes.",
-            "Recommended interventions validated by simulation (+8.0%) and post-implementation improvement (+8.4%)."
+            "Analyzed 5,000+ student records across 10 years to identify employment drivers.",
+            "Proposed interventions validated by simulation (+8.0%) and observed gains (+8.4%)."
           ]
         }
       ]
