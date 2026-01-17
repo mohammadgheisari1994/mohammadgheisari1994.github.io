@@ -1,0 +1,7 @@
+.languages .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.language-card h4 {
+    margin-bottom: 0.6rem;
+}

@@ -1,0 +1,288 @@
+{
+  "profile": {
+    "firstName": "Mohammadmahdi",
+    "lastName": "Gheisari",
+    "fullName": "Mohammadmahdi Gheisari",
+    "role": "Computer Vision / ML Engineer | Real-time Inference | Industrial Inspection",
+    "contacts": [
+      {
+        "type": "phone",
+        "label": "+39 3279543719",
+        "value": "+39 3279543719",
+        "url": "tel:+393279543719"
+      },
+      {
+        "type": "email",
+        "label": "m.gheisari1994@gmail.com",
+        "value": "m.gheisari1994@gmail.com",
+        "url": "mailto:m.gheisari1994@gmail.com"
+      },
+      {
+        "type": "github",
+        "label": "mohammadgheisari1994",
+        "value": "mohammadgheisari1994",
+        "url": "https://github.com/mohammadgheisari1994"
+      },
+      {
+        "type": "linkedin",
+        "label": "m-gheisari-h",
+        "value": "m-gheisari-h",
+        "url": "https://linkedin.com/in/m-gheisari-h"
+      }
+    ]
+  },
+  "highlights": [
+    {
+      "date": "2025 - Present",
+      "title": "Chief Technology Officer (AI & Data)",
+      "text": "Owned the AI/Data roadmap for an industrial defect-detection product; drove customer demos and defined measurable acceptance criteria, including on-site adaptation when needed."
+    },
+    {
+      "date": "2024 - 2025",
+      "title": "R&D Scientist (Computer Vision)",
+      "text": "Developed thermography-based welding defect detection prototypes, including one-shot/low-data learning for limited labels."
+    },
+    {
+      "date": "2024 - 2025",
+      "title": "Algorithm Development for Weld Path Optimization | Data Scientist Intern",
+      "text": "Built an STL mesh processing and path planning pipeline for robotic welding; achieved ~86% path match rate vs reference trajectories on an internal evaluation set."
+    },
+    {
+      "date": "2019 - 2020",
+      "title": "Statistical Analyst (Market Research)",
+      "text": "Analyzed survey datasets for client studies, delivering segmentation insights and statistical testing results through concise reports for decision support."
+    }
+  ],
+  "sectionsOrder": [
+    "summary",
+    "skills",
+    "experience",
+    "projects",
+    "education",
+    "certificates",
+    "languages"
+  ],
+  "sections": {
+    "summary": {
+      "title": "Personal Profile",
+      "text": "Computer Vision / ML Engineer with a Statistics-to-Data Science background, focused on industrial thermography and real-time defect detection. Experienced across the full ML lifecycle (data validation, model development, evaluation, and deployment-ready inference), including customer-site local model setup/adaptation for new environments. Led a 3-6 person AI team and delivered customer-facing demos that enabled faster quality screening and reduced reliance on secondary inspections."
+    },
+    "skills": {
+      "title": "Skills",
+      "categories": [
+        {
+          "category": "ML/CV",
+          "skills": [
+            "PyTorch",
+            "scikit-learn",
+            "OpenCV",
+            "one-shot/low-data learning",
+            "evaluation & error analysis"
+          ]
+        },
+        {
+          "category": "MLOps/Deploy",
+          "skills": [
+            "Docker",
+            "reproducible training & inference",
+            "deployment packaging"
+          ]
+        },
+        {
+          "category": "Data",
+          "skills": [
+            "NumPy",
+            "pandas",
+            "SQL"
+          ]
+        },
+        {
+          "category": "Systems",
+          "skills": [
+            "Linux",
+            "Git"
+          ]
+        }
+      ]
+    },
+    "experience": {
+      "title": "Work Experience",
+      "items": [
+        {
+          "title": "Chief Technology Officer (AI & Data)",
+          "company": "Therness S.r.l",
+          "location": "Turin, Italy",
+          "date": "2025 - Present",
+          "bullets": [
+            "Owned the AI/Data roadmap for an industrial defect-detection product; drove customer demos and defined measurable acceptance criteria, including on-site adaptation when needed.",
+            "Shipped 2 real-time and 3 post-processing models for thermal-video welding defect detection; post-processing models required no on-site training; real-time rollout enabled rapid local setup (~30 min / <1 min).",
+            "Deployed on a GPU-powered edge device for on-prem inference (and optional on-site adaptation); built the service layer in Django and integrated with the frontend via WebSocket.",
+            "Built and led a cross-functional team (3-6; ML/CV + software) and drove delivery for customer deployments and demos."
+          ]
+        },
+        {
+          "title": "R&D Scientist (Computer Vision)",
+          "company": "Therness S.r.l",
+          "location": "Turin, Italy",
+          "date": "2024 - 2025",
+          "bullets": [
+            "Developed thermography-based welding defect detection prototypes, including one-shot/low-data learning for limited labels.",
+            "Built data validation, preprocessing, and error-analysis workflow for robust performance on real thermal video runs."
+          ]
+        },
+        {
+          "title": "Algorithm Development for Weld Path Optimization | Data Scientist Intern",
+          "company": "Ades Consulting & Service Srl",
+          "location": "Turin, Italy",
+          "date": "2024 - 2025",
+          "bullets": [
+            "Built an STL mesh processing and path planning pipeline for robotic welding; achieved ~86% path match rate vs reference trajectories on an internal evaluation set.",
+            "Developed visualization and debugging tooling to speed up iteration cycles and stakeholder review."
+          ]
+        },
+        {
+          "title": "Statistical Analyst (Market Research)",
+          "company": "Shomal Market Insights",
+          "location": "Karaj, Iran",
+          "date": "2019 - 2020",
+          "bullets": [
+            "Analyzed survey datasets for client studies, delivering segmentation insights and statistical testing results through concise reports for decision support.",
+            "Improved data processing workflows by optimizing performance-critical steps in C++, speeding analysis on larger datasets and increasing reliability."
+          ]
+        },
+        {
+          "title": "Data Analyst Intern",
+          "company": "Engineering Department, University of Hormozgan",
+          "location": "Bandar Abbas, Iran",
+          "date": "2016 - 2017",
+          "bullets": [
+            "Analyzed 5,000+ records across 10 years to identify drivers of post-graduation employment outcomes.",
+            "Delivered interventions validated by simulation (+8.0%) and observed post-implementation improvement (+8.4%)."
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "title": "University Projects",
+      "items": [
+        {
+          "title": "Master's Thesis - ML for Thermographic Analysis in Welding",
+          "organization": "Politecnico di Torino - Turin, Italy",
+          "subtitle": "In collaboration with Therness S.r.l.",
+          "date": "Sep 2024 - Expected Mar 2026",
+          "bullets": [
+            "Built a thermographic analysis workflow and developed ML/DL models for welding defect detection and in-process quality monitoring.",
+            "Designed CV preprocessing and real-time inference approach for deployment on an on-prem edge device. (Code/data not public due to company confidentiality.)"
+          ]
+        },
+        {
+          "title": "Distributed & Federated Learning (CIFAR-100)",
+          "organization": "Politecnico di Torino - Turin, Italy",
+          "subtitle": "",
+          "date": "Mar 2024 - Sep 2024",
+          "bullets": [
+            "Implemented and benchmarked distributed/federated training, evaluating accuracy, scalability, and communication cost across client settings.",
+            "Prototyped efficiency techniques (layer freezing, adaptive local steps) for heterogeneous clients."
+          ]
+        },
+        {
+          "title": "Optimized Voice Intent Detection for IoT Edge Devices",
+          "organization": "Politecnico di Torino - Turin, Italy",
+          "subtitle": "",
+          "date": "Sep 2023 - Jan 2024",
+          "bullets": [
+            "Developed a voice intent detection model using NLP and supervised learning for accurate intent classification on voice assistants.",
+            "Optimized the model for edge deployment by reducing size and improving latency on resource-constrained IoT devices.",
+            "Tech: Python, NLP, intent classification, edge deployment."
+          ]
+        },
+        {
+          "title": "Predicting Dengue Fever with Regression Analysis",
+          "organization": "Politecnico di Torino - Turin, Italy",
+          "subtitle": "",
+          "date": "Oct 2022 - Feb 2023",
+          "bullets": [
+            "Built and validated regression models using meteorological covariates to forecast weekly dengue cases.",
+            "Produced interpretable insights on climate drivers to support early-warning analysis and public health planning.",
+            "Tech: regression, feature engineering, model validation (Python/R)."
+          ]
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "institution": "Politecnico di Torino",
+          "degree": "M.Sc. in Data Science and Engineering",
+          "location": "Turin, Italy",
+          "date": "2021 - Expected Mar 2026"
+        },
+        {
+          "institution": "University of Hormozgan",
+          "degree": "B.Sc. in Applied Statistics",
+          "location": "Bandar Abbas, Iran",
+          "date": "2013 - 2017"
+        }
+      ]
+    },
+    "certificates": {
+      "title": "Certificates",
+      "items": [
+        {
+          "title": "Git Essentials",
+          "issuer": "Packt",
+          "location": "Coursera",
+          "date": "2025"
+        },
+        {
+          "title": "Introduction to Agile Development and Scrum",
+          "issuer": "IBM",
+          "location": "Coursera",
+          "date": "2025"
+        },
+        {
+          "title": "Learn Python for Data Science (ML & Unsupervised Learning)",
+          "issuer": "Maven Analytics",
+          "location": "Udemy",
+          "date": "2024"
+        },
+        {
+          "title": "Machine Learning and Deep Learning Specialization (8 courses)",
+          "issuer": "DeepLearning.AI",
+          "location": "Coursera",
+          "date": "2023"
+        },
+        {
+          "title": "Google Data Analytics Professional Certificate (8 courses)",
+          "issuer": "Google",
+          "location": "Coursera",
+          "date": "2022"
+        },
+        {
+          "title": "Python (Basic) & SQL (Basic)",
+          "issuer": "HackerRank",
+          "location": "HackerRank",
+          "date": "Mar 2022"
+        }
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "items": [
+        {
+          "language": "Persian",
+          "level": "Native"
+        },
+        {
+          "language": "English",
+          "level": "C1"
+        },
+        {
+          "language": "Italian",
+          "level": "A2"
+        }
+      ]
+    }
+  }
+}

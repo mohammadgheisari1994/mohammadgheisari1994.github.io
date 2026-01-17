@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammadmahdi Gheisari - CV</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Canvas for Tube Background Animation -->
+    <canvas id="canvas"></canvas>
+
+    <!-- SVG Filter for Liquid Glass Effect -->
+    <svg style="display: none;">
+        <filter id="liquidGlass">
+            <feTurbulence type="fractalNoise" baseFrequency="0.008 0.008" numOctaves="4" seed="92" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="blurred" scale="50" xChannelSelector="B" yChannelSelector="G" />
+        </filter>
+    </svg>
+
+    <div class="container">
+        <!-- LEFT SIDE: Profile and Highlights Column -->
+        <div class="left-column">
+            <!-- Profile Panel -->
+            <aside class="profile-panel liquid-glass">
+                <div class="profile-content">
+                    <div class="profile-header">
+                        <img src="profile-photo.jpg" alt="Profile photo" class="profile-photo" id="profile-photo">
+                    </div>
+
+                    <div class="profile-info">
+                        <div class="profile-text">
+                            <h1 class="profile-name" id="profile-name"></h1>
+                            <h2 class="profile-role" id="profile-role"></h2>
+                        </div>
+
+                        <div class="profile-contacts" id="profile-contacts"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Highlights Panel -->
+            <aside class="updates-panel liquid-glass">
+                <div class="updates-header">
+                    <h3><i class="fas fa-bolt"></i> Highlights</h3>
+                </div>
+                <div class="updates-content" id="updates-content"></div>
+            </aside>
+        </div>
+
+        <!-- MIDDLE: Navigation Panel -->
+        <aside class="navigation-panel liquid-glass">
+            <nav class="section-nav" id="section-nav"></nav>
+        </aside>
+
+        <!-- RIGHT SIDE: Content Sections -->
+        <main class="content-panel">
+            <div class="section-header-card">
+                <h2 id="section-title">Loading</h2>
+            </div>
+
+            <div class="section-content-card">
+                <div class="tab-contents" id="tab-contents"></div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="src/app.js"></script>
+</body>
+</html>
