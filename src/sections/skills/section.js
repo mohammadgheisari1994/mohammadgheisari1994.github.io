@@ -6,7 +6,7 @@ export default class SkillsSection extends Section {
             id: "skills",
             navLabel: "Skills",
             title,
-            icon: "fas fa-code",
+            icon: "fas fa-screwdriver-wrench",
             templateUrl: new URL("./template.html", import.meta.url),
             styleUrl: new URL("./section.css", import.meta.url)
         });

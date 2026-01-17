@@ -71,36 +71,80 @@
       "title": "Skills",
       "categories": [
         {
-          "category": "ML/CV",
+          "category": "ML & DL",
+          "skills": [
+            "Computer Vision",
+            "Deep Learning",
+            "Machine Learning",
+            "Industrial defect detection",
+            "Optimization Algorithms"
+          ]
+        },
+        {
+          "category": "Core ML Stack",
           "skills": [
             "PyTorch",
             "scikit-learn",
             "OpenCV",
-            "one-shot/low-data learning",
-            "evaluation & error analysis"
+            "NumPy",
+            "pandas"
           ]
         },
         {
-          "category": "MLOps/Deploy",
+          "category": "Data Analysis & Statistics",
+          "skills": [
+            "Data Science",
+            "Data Analysis",
+            "Statistical Data Analysis",
+            "Data Mining",
+            "Market Research"
+          ]
+        },
+        {
+          "category": "Programming",
+          "skills": [
+            "Python",
+            "C++",
+            "R",
+            "MATLAB",
+            "Django"
+          ]
+        },
+        {
+          "category": "Databases",
+          "skills": [
+            "SQL",
+            "MySQL"
+          ]
+        },
+        {
+          "category": "MLOps & Deployment",
           "skills": [
             "Docker",
-            "reproducible training & inference",
-            "deployment packaging"
+            "Kubernetes",
+            "Edge deployment",
+            "Reproducible training & inference",
+            "Deployment packaging"
           ]
         },
         {
-          "category": "Data",
+          "category": "Visualization & Reporting",
           "skills": [
-            "NumPy",
-            "pandas",
-            "SQL"
+            "Matplotlib",
+            "Tableau",
+            "Power BI",
+            "Excel",
+            "PowerPoint"
           ]
         },
         {
-          "category": "Systems",
+          "category": "Soft Skills",
           "skills": [
-            "Linux",
-            "Git"
+            "Team leadership (3-6)",
+            "Stakeholder communication",
+            "Customer-facing demos",
+            "Problem framing",
+            "Cross-functional collaboration"
           ]
         }
       ]
