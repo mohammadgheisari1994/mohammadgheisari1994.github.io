@@ -4,7 +4,7 @@ export default class SummarySection extends Section {
     constructor({ title } = {}) {
         super({
             id: "summary",
-            navLabel: "Summary",
+            navLabel: "About",
             title,
             icon: "fas fa-user",
             templateUrl: new URL("./template.html", import.meta.url),
