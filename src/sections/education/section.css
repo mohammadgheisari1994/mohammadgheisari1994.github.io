@@ -3,3 +3,16 @@
     flex-direction: column;
     gap: 1.5rem;
 }
+
+.degree-meta {
+    margin-bottom: 0.9rem;
+}
+
+.degree-highlights-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0.4rem 0 0.6rem;
+}

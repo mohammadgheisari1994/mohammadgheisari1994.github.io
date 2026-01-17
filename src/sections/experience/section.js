@@ -38,25 +38,31 @@ export default class ExperienceSection extends Section {
             titleEl.textContent = item.title || "";
 
             const meta = document.createElement("div");
-            meta.className = "company-location";
+            meta.className = "meta-row job-meta";
 
-            const companyEl = document.createElement("span");
-            companyEl.className = "company";
-            companyEl.textContent = item.company || "";
+            if (item.company) {
+                const companyEl = document.createElement("span");
+                companyEl.className = "meta-pill";
+                companyEl.innerHTML = `<i class="fas fa-building meta-icon"></i><span>${item.company}</span>`;
+                meta.appendChild(companyEl);
+            }
 
-            const locationEl = document.createElement("span");
-            locationEl.className = "location";
-            locationEl.textContent = item.location || "";
+            if (item.location) {
+                const locationEl = document.createElement("span");
+                locationEl.className = "meta-pill";
+                locationEl.innerHTML = `<i class="fas fa-location-dot meta-icon"></i><span>${item.location}</span>`;
+                meta.appendChild(locationEl);
+            }
 
-            const duration = document.createElement("span");
-            duration.className = "duration";
-            duration.textContent = item.date || "";
+            if (item.date) {
+                const duration = document.createElement("span");
+                duration.className = "meta-pill";
+                duration.innerHTML = `<i class="fas fa-calendar meta-icon"></i><span>${item.date}</span>`;
+                meta.appendChild(duration);
+            }
 
-            meta.appendChild(companyEl);
-            meta.appendChild(locationEl);
             header.appendChild(titleEl);
             header.appendChild(meta);
-            header.appendChild(duration);
 
             const bullets = document.createElement("ul");
             bullets.className = "job-description";

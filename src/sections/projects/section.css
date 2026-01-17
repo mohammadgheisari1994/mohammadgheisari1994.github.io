@@ -9,10 +9,19 @@
     font-size: 0.9rem;
     margin-top: -0.4rem;
     margin-bottom: 0.4rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .project-subtitle {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
     margin-bottom: 0.8rem;
+}
+
+.project-org {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }

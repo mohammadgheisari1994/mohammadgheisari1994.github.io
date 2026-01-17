@@ -40,12 +40,16 @@ export default class ProjectsSection extends Section {
 
             const meta = document.createElement("div");
             meta.className = "project-meta";
-            meta.textContent = item.date || "";
+            if (item.date) {
+                meta.innerHTML = `<i class="fas fa-calendar meta-icon"></i><span>${item.date}</span>`;
+            }
             header.appendChild(meta);
 
             const org = document.createElement("div");
             org.className = "project-org";
-            org.textContent = item.organization || "";
+            if (item.organization) {
+                org.innerHTML = `<i class="fas fa-university meta-icon"></i><span>${item.organization}</span>`;
+            }
 
             const subtitle = document.createElement("div");
             subtitle.className = "project-subtitle";

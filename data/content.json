@@ -260,13 +260,26 @@
           "institution": "Politecnico di Torino",
           "degree": "M.Sc. in Data Science and Engineering",
           "location": "Turin, Italy",
-          "date": "2021 - Expected Mar 2026"
+          "date": "2021 - Expected Mar 2026",
+          "highlights": [
+            "Distributed/Federated Learning (CV focus)",
+            "Deep Learning for Computer Vision",
+            "Data Management / Data Engineering",
+            "Big Data (Hadoop, Spark)",
+            "Simulation & Modeling"
+          ]
         },
         {
           "institution": "University of Hormozgan",
           "degree": "B.Sc. in Applied Statistics",
           "location": "Bandar Abbas, Iran",
-          "date": "2013 - 2017"
+          "date": "2013 - 2017",
+          "highlights": [
+            "Nonparametric Statistics",
+            "Statistical Quality Control",
+            "Stochastic Processes",
+            "Multivariate Statistics (Continuous & Discrete)"
+          ]
         }
       ]
     },

@@ -884,6 +884,31 @@ h3::after {
     gap: 1rem;
 }
 
+.meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.meta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 6px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.meta-pill .meta-icon {
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
 .company {
     color: #c084fc;
     font-weight: 600;

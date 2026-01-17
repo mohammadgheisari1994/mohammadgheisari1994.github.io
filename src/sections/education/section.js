@@ -37,28 +37,50 @@ export default class EducationSection extends Section {
             const titleEl = document.createElement("h4");
             titleEl.textContent = item.degree || "";
 
-            const duration = document.createElement("span");
-            duration.className = "duration";
-            duration.textContent = item.date || "";
-
             header.appendChild(titleEl);
-            header.appendChild(duration);
 
-            const details = document.createElement("ul");
-            details.className = "degree-details";
+            const meta = document.createElement("div");
+            meta.className = "meta-row degree-meta";
 
-            const institution = document.createElement("li");
-            institution.textContent = item.institution || "";
-            details.appendChild(institution);
+            if (item.institution) {
+                const institution = document.createElement("span");
+                institution.className = "meta-pill";
+                institution.innerHTML = `<i class="fas fa-university meta-icon"></i><span>${item.institution}</span>`;
+                meta.appendChild(institution);
+            }
 
             if (item.location) {
-                const location = document.createElement("li");
-                location.textContent = item.location;
-                details.appendChild(location);
+                const location = document.createElement("span");
+                location.className = "meta-pill";
+                location.innerHTML = `<i class="fas fa-location-dot meta-icon"></i><span>${item.location}</span>`;
+                meta.appendChild(location);
+            }
+
+            if (item.date) {
+                const duration = document.createElement("span");
+                duration.className = "meta-pill";
+                duration.innerHTML = `<i class="fas fa-calendar meta-icon"></i><span>${item.date}</span>`;
+                meta.appendChild(duration);
             }
 
             card.appendChild(header);
-            card.appendChild(details);
+            card.appendChild(meta);
+
+            if (item.highlights?.length) {
+                const label = document.createElement("div");
+                label.className = "degree-highlights-title";
+                label.textContent = "Key Courses";
+                card.appendChild(label);
+
+                const highlights = document.createElement("ul");
+                highlights.className = "degree-details degree-highlights";
+                item.highlights.forEach((highlight) => {
+                    const li = document.createElement("li");
+                    li.textContent = highlight;
+                    highlights.appendChild(li);
+                });
+                card.appendChild(highlights);
+            }
             list.appendChild(card);
         });
     }
