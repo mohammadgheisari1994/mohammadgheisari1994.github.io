@@ -25,3 +25,8 @@
     align-items: center;
     gap: 0.5rem;
 }
+
+.project-meta .meta-icon,
+.project-org .meta-icon {
+    margin-right: 0.35rem;
+}
