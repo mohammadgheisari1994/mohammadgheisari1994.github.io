@@ -37,31 +37,50 @@ export default class CertificatesSection extends Section {
             const titleEl = document.createElement("h4");
             titleEl.textContent = item.title || "";
 
-            const dateEl = document.createElement("span");
-            dateEl.className = "certificate-date";
-            dateEl.textContent = item.date || "";
-
             header.appendChild(titleEl);
-            header.appendChild(dateEl);
 
             const meta = document.createElement("div");
-            meta.className = "certificate-meta";
+            meta.className = "meta-row certificate-meta-row";
 
-            const issuer = document.createElement("span");
-            issuer.className = "certificate-issuer";
-            issuer.textContent = item.issuer || "";
+            if (item.issuer) {
+                const issuer = document.createElement("span");
+                issuer.className = "meta-pill";
+                issuer.innerHTML = `<i class="fas fa-award meta-icon"></i><span>${item.issuer}</span>`;
+                meta.appendChild(issuer);
+            }
 
-            const platform = document.createElement("span");
-            platform.className = "certificate-platform";
-            platform.textContent = item.location || "";
-
-            meta.appendChild(issuer);
             if (item.location) {
+                const platform = document.createElement("span");
+                platform.className = "meta-pill";
+                platform.innerHTML = `<i class="fas fa-graduation-cap meta-icon"></i><span>${item.location}</span>`;
                 meta.appendChild(platform);
+            }
+
+            if (item.date) {
+                const date = document.createElement("span");
+                date.className = "meta-pill";
+                date.innerHTML = `<i class="fas fa-calendar meta-icon"></i><span>${item.date}</span>`;
+                meta.appendChild(date);
             }
 
             card.appendChild(header);
             card.appendChild(meta);
+
+            if (item.courses?.length) {
+                const label = document.createElement("div");
+                label.className = "certificate-courses-title";
+                label.textContent = "Courses";
+                card.appendChild(label);
+
+                const list = document.createElement("ul");
+                list.className = "certificate-courses";
+                item.courses.forEach((course) => {
+                    const li = document.createElement("li");
+                    li.textContent = course;
+                    list.appendChild(li);
+                });
+                card.appendChild(list);
+            }
             list.appendChild(card);
         });
     }

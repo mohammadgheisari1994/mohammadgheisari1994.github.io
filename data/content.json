@@ -308,19 +308,39 @@
           "title": "Machine Learning and Deep Learning Specialization (8 courses)",
           "issuer": "DeepLearning.AI",
           "location": "Coursera",
-          "date": "2023"
+          "date": "2023",
+          "courses": [
+            "Supervised Machine Learning: Regression and Classification",
+            "Advanced Learning Algorithms",
+            "Unsupervised Learning, Recommenders, Reinforcement Learning",
+            "Neural Networks and Deep Learning",
+            "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
+            "Structuring Machine Learning Projects",
+            "Convolutional Neural Networks",
+            "Sequence Models"
+          ]
         },
         {
           "title": "Google Data Analytics Professional Certificate (8 courses)",
           "issuer": "Google",
           "location": "Coursera",
-          "date": "2022"
+          "date": "2021 - 2022",
+          "courses": [
+            "Foundations: Data, Data, Everywhere",
+            "Ask Questions to Make Data-Driven Decisions",
+            "Prepare Data for Exploration",
+            "Process Data from Dirty to Clean",
+            "Analyze Data to Answer Questions",
+            "Share Data Through the Art of Visualization",
+            "Data Analysis with R Programming",
+            "Google Data Analytics Capstone: Complete a Case Study"
+          ]
         },
         {
           "title": "Python (Basic) & SQL (Basic)",
           "issuer": "HackerRank",
           "location": "HackerRank",
-          "date": "Mar 2022"
+          "date": "2022"
         }
       ]
     },

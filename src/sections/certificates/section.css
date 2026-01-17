@@ -68,7 +68,43 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
+.certificate-meta-row {
+    margin-bottom: 0.6rem;
+}
+
 .certificate-issuer {
     color: rgba(255, 255, 255, 0.9);
     font-weight: 600;
+}
+
+.certificate-courses-title {
+    margin-top: 0.85rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+}
+
+.certificate-courses {
+    list-style: none;
+    margin-top: 0.5rem;
+    padding-left: 0;
+}
+
+.certificate-courses li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.certificate-courses li::before {
+    content: "•";
+    color: #93c5fd;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
