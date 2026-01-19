@@ -54,7 +54,7 @@
     }
   ],
   "sectionsOrder": [
-    "summary",
+    "about",
     "skills",
     "experience",
     "projects",
@@ -64,10 +64,6 @@
     "languages"
   ],
   "sections": {
-    "summary": {
-      "title": "Personal Profile",
-      "text": "Built real-time defect-detection systems for industrial thermography, spanning data validation, model development, and edge-ready inference. I bridge applied CV with production constraints, delivering on-site deployments, customer demos, and measurable inspection gains. Curious and continuously learning, I recently led a 3-6 person AI team while shipping both real-time and post-processing models for field use."
-    },
     "skills": {
       "title": "Skills",
       "categories": [
@@ -384,6 +380,34 @@
           "title": "City Cycling",
           "description": "Prefer cycling around the city for daily commutes.",
           "icon": "fas fa-person-biking"
+        }
+      ]
+    },
+    "about": {
+      "title": "About",
+      "intro": [
+        "I engineer real-time Computer Vision solutions that solve complex industrial problems. As a Computer Vision & ML Engineer with a background in Statistics, I specialize in bridging the gap between theoretical research and production-grade deployment.",
+        "Previously, I served as the Chief Technology Officer (AI & Data) at Therness S.r.l., where I led the development of industrial defect detection products and shipped real-time inference models for manufacturing environments."
+      ],
+      "sections": [
+        {
+          "heading": "Technical Expertise",
+          "body": [
+            "My technical expertise spans the entire ML lifecycle\u2014from robust data validation and model development to edge-ready inference on resource-constrained devices.",
+            "Key highlights of my experience include:"
+          ],
+          "list": [
+            "Real-time Optimization: engineered real-time welding defect detection models that reduced local setup times from ~30 minutes to under 1 minute.",
+            "Edge Deployment: built lightweight inference architectures for on-premise deployments, integrating Django service layers with WebSocket frontends.",
+            "Data-Centric AI: develop validation workflows and error-analysis protocols to support one-shot and low-data learning in industrial settings."
+          ]
+        },
+        {
+          "heading": "Leadership & Background",
+          "body": [
+            "In my previous role as CTO, I led a cross-functional team of 3-6 engineers and researchers, overseeing customer-facing demos and on-site model adaptations.",
+            "My approach to AI is grounded in a B.Sc. in Applied Statistics. I am currently finalizing my M.Sc. in Data Science and Engineering at Politecnico di Torino, with research focused on ML for thermographic analysis in welding."
+          ]
         }
       ]
     }

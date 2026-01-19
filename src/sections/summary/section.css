@@ -1,3 +1,67 @@
 .summary-text {
     margin-bottom: 0;
 }
+
+.about-intro p,
+.about-more p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1rem;
+}
+
+.about-more h3 {
+    margin-top: 1.6rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.about-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0.8rem;
+}
+
+.about-list li {
+    margin-bottom: 0.6rem;
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+}
+
+.about-list li::before {
+    content: "•";
+    color: #c084fc;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.about-more {
+    display: none;
+}
+
+.about-more.is-open {
+    display: block;
+}
+
+.about-toggle {
+    margin-top: 0.6rem;
+    background: transparent;
+    color: #c084fc;
+    border: 1px solid rgba(192, 132, 252, 0.5);
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.about-toggle:hover {
+    background: rgba(192, 132, 252, 0.12);
+}

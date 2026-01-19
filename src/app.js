@@ -11,7 +11,7 @@ import LanguagesSection from "./sections/languages/section.js";
 import InterestsSection from "./sections/interests/section.js";
 
 const sectionFactory = {
-    summary: SummarySection,
+    about: SummarySection,
     skills: SkillsSection,
     experience: ExperienceSection,
     projects: ProjectsSection,
@@ -22,7 +22,7 @@ const sectionFactory = {
 };
 
 function buildSections(data) {
-    const defaultOrder = ["summary", "experience", "projects", "education", "skills", "certificates", "languages", "interests"];
+    const defaultOrder = ["about", "experience", "projects", "education", "skills", "certificates", "interests", "languages"];
     const order = data.sectionsOrder?.length ? data.sectionsOrder : defaultOrder;
     return order
         .map((id) => {
