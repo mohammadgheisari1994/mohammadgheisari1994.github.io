@@ -392,10 +392,10 @@
       "sections": [
         {
           "heading": "Production-Grade AI",
-          "body": [
-            "Having served as a CTO in the industrial AI sector, I realized that a model\u0019s accuracy in a Jupyter Notebook means nothing if it fails on the factory floor.",
-            "That\u0019s why my focus is strictly on production-grade AI: building real-time, edge-optimized thermography systems that withstand the chaos of the real world. I don\u0019t just train models; I design full-stack inference architectures that deliver actionable insights in milliseconds."
-          ]
+        "body": [
+          "Having served as a CTO in the industrial AI sector, I realized that a model's accuracy in a Jupyter Notebook means nothing if it fails on the factory floor.",
+          "That's why my focus is strictly on production-grade AI: building real-time, edge-optimized thermography systems that withstand the chaos of the real world. I don't just train models; I design full-stack inference architectures that deliver actionable insights in milliseconds."
+        ]
         }
       ]
     }
