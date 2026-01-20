@@ -386,27 +386,15 @@
     "about": {
       "title": "About",
       "intro": [
-        "I engineer real-time Computer Vision solutions that solve complex industrial problems. As a Computer Vision & ML Engineer with a background in Statistics, I specialize in bridging the gap between theoretical research and production-grade deployment.",
-        "Previously, I served as the Chief Technology Officer (AI & Data) at Therness S.r.l., where I led the development of industrial defect detection products and shipped real-time inference models for manufacturing environments."
+        "I engineer reliability.",
+        "My journey started in Applied Statistics, where I learned that data creates the map. Today, as a Computer Vision Engineer, I build the engines that navigate it."
       ],
       "sections": [
         {
-          "heading": "Technical Expertise",
+          "heading": "Production-Grade AI",
           "body": [
-            "My technical expertise spans the entire ML lifecycle\u2014from robust data validation and model development to edge-ready inference on resource-constrained devices.",
-            "Key highlights of my experience include:"
-          ],
-          "list": [
-            "Real-time Optimization: engineered real-time welding defect detection models that reduced local setup times from ~30 minutes to under 1 minute.",
-            "Edge Deployment: built lightweight inference architectures for on-premise deployments, integrating Django service layers with WebSocket frontends.",
-            "Data-Centric AI: develop validation workflows and error-analysis protocols to support one-shot and low-data learning in industrial settings."
-          ]
-        },
-        {
-          "heading": "Leadership & Background",
-          "body": [
-            "In my previous role as CTO, I led a cross-functional team of 3-6 engineers and researchers, overseeing customer-facing demos and on-site model adaptations.",
-            "My approach to AI is grounded in a B.Sc. in Applied Statistics. I am currently finalizing my M.Sc. in Data Science and Engineering at Politecnico di Torino, with research focused on ML for thermographic analysis in welding."
+            "Having served as a CTO in the industrial AI sector, I realized that a model\u0019s accuracy in a Jupyter Notebook means nothing if it fails on the factory floor.",
+            "That\u0019s why my focus is strictly on production-grade AI: building real-time, edge-optimized thermography systems that withstand the chaos of the real world. I don\u0019t just train models; I design full-stack inference architectures that deliver actionable insights in milliseconds."
           ]
         }
       ]
