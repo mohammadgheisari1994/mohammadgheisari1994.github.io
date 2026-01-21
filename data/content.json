@@ -28,6 +28,13 @@
         "label": "mohammadgheisari1994",
         "value": "mohammadgheisari1994",
         "url": "https://github.com/mohammadgheisari1994"
+      },
+      {
+        "type": "resume",
+        "label": "Download CV",
+        "value": "Mohammad_Gheisari_CV_Computer_Vision_Engineer.pdf",
+        "url": "Mohammad_Gheisari_CV_Computer_Vision_Engineer.pdf",
+        "download": true
       }
     ]
   },

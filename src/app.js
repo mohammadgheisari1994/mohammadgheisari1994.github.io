@@ -58,15 +58,20 @@ function renderProfile(profile) {
             phone: "fas fa-phone",
             github: "fab fa-github",
             linkedin: "fab fa-linkedin",
-            website: "fas fa-globe"
+            website: "fas fa-globe",
+            resume: "fas fa-file-pdf"
         };
         (profile.contacts || []).forEach((contact) => {
             const link = document.createElement("a");
             link.className = "contact-item";
             link.href = contact.url || "#";
-            if (contact.url?.startsWith("http")) {
+            const isDownload = Boolean(contact.download);
+            if (contact.url?.startsWith("http") && !isDownload) {
                 link.target = "_blank";
                 link.rel = "noopener noreferrer";
+            }
+            if (isDownload) {
+                link.download = contact.downloadName || "";
             }
             const icon = document.createElement("i");
             icon.className = icons[contact.type] || "fas fa-link";
