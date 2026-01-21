@@ -155,8 +155,9 @@
           "location": "Turin, Italy",
           "date": "Sep 2025 - Jan 2026",
           "bullets": [
-            "Drove AI/data delivery for thermographic defect detection, translating customer needs into acceptance criteria and demos.",
-            "Delivered 2 real-time + 3 post-processing models on GPU edge with Django/WebSocket service integration and rapid on-site setup."
+            "After validating the core technology, I stepped up to lead the engineering team as CTO. My focus shifted from \"Does it work?\" to \"Does it scale?\".",
+            "I architected the production system, deploying PyTorch models onto constrained edge devices using Docker and ONNX, and led the team to build a Django service layer with real-time WebSocket delivery for operators.",
+            "Optimizing UX and inference speed cut inspection setup from 30 minutes to under 60 seconds, turning a complex R&D prototype into a usable industrial product."
           ]
         },
         {
@@ -165,8 +166,9 @@
           "location": "Turin, Italy",
           "date": "Sep 2024 - Aug 2025",
           "bullets": [
-            "Prototyped thermography-based defect detection with one-shot/low-label methods for sparse data.",
-            "Built the validation + error-analysis pipeline used to harden models on real thermal runs."
+            "At Therness R&D, data scarcity was the core challenge: standard CV models failed on thermal datasets. I focused on one-shot and low-data learning.",
+            "I built foundational algorithms that could detect defects with minimal examples and established a rigorous error-analysis workflow to harden models for field use.",
+            "This phase was about deep problem-solving and validating that the technology was viable before scaling to production."
           ]
         },
         {
@@ -175,8 +177,9 @@
           "location": "Turin, Italy",
           "date": "Jul 2024 - Sep 2024",
           "bullets": [
-            "Built STL mesh processing and robotic weld path planning; reached ~86% match vs reference trajectories.",
-            "Shipped visualization/debug tooling that shortened iteration and review cycles."
+            "At Ades Consulting, I tackled the geometric challenge of automating weld paths by processing raw STL meshes to generate optimal robotic trajectories.",
+            "I developed a custom pipeline that analyzed mesh topology to predict the most efficient weld path, achieving an 86% match rate with expert human trajectories.",
+            "The project sharpened my computational geometry and algorithm design skills, moving beyond pixel-based CV to vector-based spatial reasoning."
           ]
         },
         {
@@ -185,8 +188,9 @@
           "location": "Karaj, Iran",
           "date": "Jun 2019 - May 2020",
           "bullets": [
-            "Delivered market-research insights via segmentation and statistical testing reports.",
-            "Optimized C++ data-processing steps to improve runtime and reliability."
+            "At Shomal Market Insights, I learned the importance of data integrity while analyzing large survey datasets at scale.",
+            "Standard tools were too slow, so I optimized critical data-processing steps in C++ to improve runtime and reliability.",
+            "This experience marked my shift from a statistician analyzing the past to an engineer building tools for the future."
           ]
         },
         {
@@ -195,8 +199,9 @@
           "location": "Bandar Abbas, Iran",
           "date": "Sep 2016 - Sep 2017",
           "bullets": [
-            "Analyzed 5,000+ student records across 10 years to identify employment drivers.",
-            "Proposed interventions validated by simulation (+8.0%) and observed gains (+8.4%)."
+            "At the University of Hormozgan, I analyzed 10 years of data from 5,000+ students to uncover employment drivers.",
+            "Using statistical modeling, I proposed curriculum interventions; employment rates improved by 8.4% after implementation.",
+            "It cemented my belief that rigorous data analysis translates directly into real-world impact."
           ]
         }
       ]
@@ -392,10 +397,10 @@
       "sections": [
         {
           "heading": "Production-Grade AI",
-        "body": [
-          "Having served as a CTO in the industrial AI sector, I realized that a model's accuracy in a Jupyter Notebook means nothing if it fails on the factory floor.",
-          "That's why my focus is strictly on production-grade AI: building real-time, edge-optimized thermography systems that withstand the chaos of the real world. I don't just train models; I design full-stack inference architectures that deliver actionable insights in milliseconds."
-        ]
+          "body": [
+            "Having served as a CTO in the industrial AI sector, I realized that a model's accuracy in a Jupyter Notebook means nothing if it fails on the factory floor.",
+            "That's why my focus is strictly on production-grade AI: building real-time, edge-optimized thermography systems that withstand the chaos of the real world. I don't just train models; I design full-stack inference architectures that deliver actionable insights in milliseconds."
+          ]
         }
       ]
     }
