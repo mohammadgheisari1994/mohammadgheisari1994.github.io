@@ -40,22 +40,22 @@
   },
   "highlights": [
     {
-      "date": "2025 - Present",
+      "date": "Sep 2025 - Jan 2026",
       "title": "Chief Technology Officer (AI & Data)",
       "text": "Owned the AI/Data roadmap for an industrial defect-detection product; drove customer demos and defined measurable acceptance criteria, including on-site adaptation when needed."
     },
     {
-      "date": "2024 - 2025",
+      "date": "Sep 2024 - Aug 2025",
       "title": "R&D Scientist (Computer Vision)",
       "text": "Developed thermography-based welding defect detection prototypes, including one-shot/low-data learning for limited labels."
     },
     {
-      "date": "2024 - 2025",
+      "date": "Jul 2024 - Sep 2024",
       "title": "Algorithm Development for Weld Path Optimization | Data Scientist Intern",
       "text": "Built an STL mesh processing and path planning pipeline for robotic welding; achieved ~86% path match rate vs reference trajectories on an internal evaluation set."
     },
     {
-      "date": "2019 - 2020",
+      "date": "Jun 2019 - May 2020",
       "title": "Statistical Analyst (Market Research)",
       "text": "Analyzed survey datasets for client studies, delivering segmentation insights and statistical testing results through concise reports for decision support."
     }
