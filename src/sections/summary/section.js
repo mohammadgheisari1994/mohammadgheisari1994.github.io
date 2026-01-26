@@ -24,6 +24,8 @@ export default class SummarySection extends Section {
 
         introEl.innerHTML = "";
         moreEl.innerHTML = "";
+        moreEl.classList.remove("is-open");
+        toggle.textContent = "Read more";
 
         if (!intro.length && !sections.length) {
             introEl.textContent = "About content will appear here.";
@@ -60,9 +62,10 @@ export default class SummarySection extends Section {
             }
         });
 
-        toggle.addEventListener("click", () => {
+        toggle.hidden = sections.length === 0;
+        toggle.onclick = () => {
             const isOpen = moreEl.classList.toggle("is-open");
             toggle.textContent = isOpen ? "Show less" : "Read more";
-        });
+        };
     }
 }

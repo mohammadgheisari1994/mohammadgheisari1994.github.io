@@ -1,4 +1,5 @@
 import Section from "../../core/section.js";
+import { createEmptyState, createList, createMetaPill, createMetaRow } from "../../core/dom.js";
 
 export default class ExperienceSection extends Section {
     constructor({ title } = {}) {
@@ -20,10 +21,7 @@ export default class ExperienceSection extends Section {
         list.innerHTML = "";
         const items = data?.items || [];
         if (!items.length) {
-            const empty = document.createElement("div");
-            empty.className = "empty-state";
-            empty.textContent = "Experience will appear here.";
-            list.appendChild(empty);
+            list.appendChild(createEmptyState("Experience will appear here."));
             return;
         }
 
@@ -37,44 +35,21 @@ export default class ExperienceSection extends Section {
             const titleEl = document.createElement("h4");
             titleEl.textContent = item.title || "";
 
-            const meta = document.createElement("div");
-            meta.className = "meta-row job-meta";
-
-            if (item.company) {
-                const companyEl = document.createElement("span");
-                companyEl.className = "meta-pill";
-                companyEl.innerHTML = `<i class="fas fa-building meta-icon"></i><span>${item.company}</span>`;
-                meta.appendChild(companyEl);
-            }
-
-            if (item.location) {
-                const locationEl = document.createElement("span");
-                locationEl.className = "meta-pill";
-                locationEl.innerHTML = `<i class="fas fa-location-dot meta-icon"></i><span>${item.location}</span>`;
-                meta.appendChild(locationEl);
-            }
-
-            if (item.date) {
-                const duration = document.createElement("span");
-                duration.className = "meta-pill";
-                duration.innerHTML = `<i class="fas fa-calendar meta-icon"></i><span>${item.date}</span>`;
-                meta.appendChild(duration);
-            }
+            const meta = createMetaRow(
+                [
+                    item.company ? createMetaPill("fas fa-building", item.company) : null,
+                    item.location ? createMetaPill("fas fa-location-dot", item.location) : null,
+                    item.date ? createMetaPill("fas fa-calendar", item.date) : null
+                ],
+                "job-meta"
+            );
 
             header.appendChild(titleEl);
             header.appendChild(meta);
 
-            const bullets = document.createElement("ul");
-            bullets.className = "job-description";
-            (item.bullets || []).forEach((bullet) => {
-                const li = document.createElement("li");
-                li.textContent = bullet;
-                bullets.appendChild(li);
-            });
-
             card.appendChild(header);
             if (item.bullets?.length) {
-                card.appendChild(bullets);
+                card.appendChild(createList(item.bullets, "job-description"));
             }
             list.appendChild(card);
         });

@@ -55,26 +55,8 @@
     margin: 0;
 }
 
-.certificate-date {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
-}
-
-.certificate-meta {
-    display: flex;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
 .certificate-meta-row {
     margin-bottom: 0.6rem;
-}
-
-.certificate-issuer {
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 600;
 }
 
 .certificate-courses-title {

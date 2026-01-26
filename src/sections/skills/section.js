@@ -1,4 +1,5 @@
 import Section from "../../core/section.js";
+import { createEmptyState } from "../../core/dom.js";
 
 export default class SkillsSection extends Section {
     constructor({ title } = {}) {
@@ -20,10 +21,7 @@ export default class SkillsSection extends Section {
         grid.innerHTML = "";
         const categories = data?.categories || [];
         if (!categories.length) {
-            const empty = document.createElement("div");
-            empty.className = "empty-state";
-            empty.textContent = "Skills will appear here.";
-            grid.appendChild(empty);
+            grid.appendChild(createEmptyState("Skills will appear here."));
             return;
         }
 

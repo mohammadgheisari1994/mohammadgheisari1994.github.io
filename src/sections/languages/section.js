@@ -1,4 +1,5 @@
 import Section from "../../core/section.js";
+import { createEmptyState } from "../../core/dom.js";
 
 export default class LanguagesSection extends Section {
     constructor({ title } = {}) {
@@ -20,10 +21,7 @@ export default class LanguagesSection extends Section {
         grid.innerHTML = "";
         const items = data?.items || [];
         if (!items.length) {
-            const empty = document.createElement("div");
-            empty.className = "empty-state";
-            empty.textContent = "Languages will appear here.";
-            grid.appendChild(empty);
+            grid.appendChild(createEmptyState("Languages will appear here."));
             return;
         }
 

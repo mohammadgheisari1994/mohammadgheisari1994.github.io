@@ -1,4 +1,5 @@
 import Section from "../../core/section.js";
+import { createEmptyState, createList, createMetaPill, createMetaRow } from "../../core/dom.js";
 
 export default class EducationSection extends Section {
     constructor({ title } = {}) {
@@ -20,10 +21,7 @@ export default class EducationSection extends Section {
         list.innerHTML = "";
         const items = data?.items || [];
         if (!items.length) {
-            const empty = document.createElement("div");
-            empty.className = "empty-state";
-            empty.textContent = "Education will appear here.";
-            list.appendChild(empty);
+            list.appendChild(createEmptyState("Education will appear here."));
             return;
         }
 
@@ -39,29 +37,14 @@ export default class EducationSection extends Section {
 
             header.appendChild(titleEl);
 
-            const meta = document.createElement("div");
-            meta.className = "meta-row degree-meta";
-
-            if (item.institution) {
-                const institution = document.createElement("span");
-                institution.className = "meta-pill";
-                institution.innerHTML = `<i class="fas fa-university meta-icon"></i><span>${item.institution}</span>`;
-                meta.appendChild(institution);
-            }
-
-            if (item.location) {
-                const location = document.createElement("span");
-                location.className = "meta-pill";
-                location.innerHTML = `<i class="fas fa-location-dot meta-icon"></i><span>${item.location}</span>`;
-                meta.appendChild(location);
-            }
-
-            if (item.date) {
-                const duration = document.createElement("span");
-                duration.className = "meta-pill";
-                duration.innerHTML = `<i class="fas fa-calendar meta-icon"></i><span>${item.date}</span>`;
-                meta.appendChild(duration);
-            }
+            const meta = createMetaRow(
+                [
+                    item.institution ? createMetaPill("fas fa-university", item.institution) : null,
+                    item.location ? createMetaPill("fas fa-location-dot", item.location) : null,
+                    item.date ? createMetaPill("fas fa-calendar", item.date) : null
+                ],
+                "degree-meta"
+            );
 
             card.appendChild(header);
             card.appendChild(meta);
@@ -72,14 +55,7 @@ export default class EducationSection extends Section {
                 label.textContent = "Key Courses";
                 card.appendChild(label);
 
-                const highlights = document.createElement("ul");
-                highlights.className = "degree-details degree-highlights";
-                item.highlights.forEach((highlight) => {
-                    const li = document.createElement("li");
-                    li.textContent = highlight;
-                    highlights.appendChild(li);
-                });
-                card.appendChild(highlights);
+                card.appendChild(createList(item.highlights, "degree-details degree-highlights"));
             }
             list.appendChild(card);
         });

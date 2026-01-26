@@ -1,4 +1,5 @@
 import Section from "../../core/section.js";
+import { createEmptyState, createIconLabel, createList } from "../../core/dom.js";
 
 export default class ProjectsSection extends Section {
     constructor({ title } = {}) {
@@ -20,10 +21,7 @@ export default class ProjectsSection extends Section {
         list.innerHTML = "";
         const items = data?.items || [];
         if (!items.length) {
-            const empty = document.createElement("div");
-            empty.className = "empty-state";
-            empty.textContent = "Projects will appear here.";
-            list.appendChild(empty);
+            list.appendChild(createEmptyState("Projects will appear here."));
             return;
         }
 
@@ -38,40 +36,38 @@ export default class ProjectsSection extends Section {
             titleEl.textContent = item.title || "";
             header.appendChild(titleEl);
 
-            const meta = document.createElement("div");
-            meta.className = "project-meta";
-            if (item.date) {
-                meta.innerHTML = `<i class="fas fa-calendar meta-icon"></i><span>${item.date}</span>`;
+            const meta = item.date
+                ? createIconLabel({
+                      icon: "fas fa-calendar",
+                      text: item.date,
+                      className: "project-meta"
+                  })
+                : null;
+            if (meta) {
+                header.appendChild(meta);
             }
-            header.appendChild(meta);
 
-            const org = document.createElement("div");
-            org.className = "project-org";
-            if (item.organization) {
-                org.innerHTML = `<i class="fas fa-university meta-icon"></i><span>${item.organization}</span>`;
-            }
+            const org = item.organization
+                ? createIconLabel({
+                      icon: "fas fa-university",
+                      text: item.organization,
+                      className: "project-org"
+                  })
+                : null;
 
             const subtitle = document.createElement("div");
             subtitle.className = "project-subtitle";
             subtitle.textContent = item.subtitle || "";
 
-            const bullets = document.createElement("ul");
-            bullets.className = "project-description";
-            (item.bullets || []).forEach((bullet) => {
-                const li = document.createElement("li");
-                li.textContent = bullet;
-                bullets.appendChild(li);
-            });
-
             card.appendChild(header);
-            if (item.organization) {
+            if (org) {
                 card.appendChild(org);
             }
             if (item.subtitle) {
                 card.appendChild(subtitle);
             }
             if (item.bullets?.length) {
-                card.appendChild(bullets);
+                card.appendChild(createList(item.bullets, "project-description"));
             }
             list.appendChild(card);
         });
