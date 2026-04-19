@@ -226,7 +226,7 @@
           "title": "Master's Thesis - ML for Thermographic Analysis in Welding",
           "organization": "Politecnico di Torino - Turin, Italy",
           "subtitle": "In collaboration with Therness S.r.l.",
-          "date": "Sep 2024 - Expected Mar 2026",
+          "date": "Sep 2024 - Mar 2026",
           "bullets": [
             "Built a thermographic analysis workflow and ML/DL models for welding defect detection and in-process monitoring.",
             "Designed CV preprocessing plus real-time inference for deployment on an on-prem edge device (confidential data/code).",
