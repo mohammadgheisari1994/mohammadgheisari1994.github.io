@@ -305,13 +305,13 @@
           "title": "Git Essentials",
           "issuer": "Packt",
           "location": "Coursera",
-          "date": "2025"
+          "date": "Oct 2025"
         },
         {
           "title": "Introduction to Agile Development and Scrum",
           "issuer": "IBM",
           "location": "Coursera",
-          "date": "2025"
+          "date": "Oct 2025"
         },
         {
           "title": "Learn Python for Data Science (ML & Unsupervised Learning)",
@@ -323,7 +323,7 @@
           "title": "Machine Learning and Deep Learning Specialization (8 courses)",
           "issuer": "DeepLearning.AI",
           "location": "Coursera",
-          "date": "2023",
+          "date": "Sep 2023",
           "courses": [
             "Supervised Machine Learning: Regression and Classification",
             "Advanced Learning Algorithms",
@@ -339,7 +339,7 @@
           "title": "Google Data Analytics Professional Certificate (8 courses)",
           "issuer": "Google",
           "location": "Coursera",
-          "date": "2021 - 2022",
+          "date": "Mar 2022",
           "courses": [
             "Foundations: Data, Data, Everywhere",
             "Ask Questions to Make Data-Driven Decisions",
