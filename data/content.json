@@ -80,6 +80,30 @@
       "title": "Skills",
       "categories": [
         {
+          "category": "Data Engineering",
+          "skills": [
+            "SQL",
+            "MySQL",
+            "ETL/ELT",
+            "REST APIs",
+            "PostgreSQL",
+            "Spark (familiarity)",
+            "Linux"
+          ]
+        },
+        {
+          "category": "AI & Analytics",
+          "skills": [
+            "PyTorch",
+            "LLMs/RAG",
+            "NumPy",
+            "pandas",
+            "Scikit-learn",
+            "OpenCV",
+            "Statistics"
+          ]
+        },
+        {
           "category": "ML & DL",
           "skills": [
             "Computer Vision",
@@ -87,16 +111,6 @@
             "Machine Learning",
             "Industrial defect detection",
             "Optimization Algorithms"
-          ]
-        },
-        {
-          "category": "Core ML Stack",
-          "skills": [
-            "PyTorch",
-            "scikit-learn",
-            "OpenCV",
-            "NumPy",
-            "pandas"
           ]
         },
         {
@@ -117,13 +131,6 @@
             "R",
             "MATLAB",
             "Django"
-          ]
-        },
-        {
-          "category": "Databases",
-          "skills": [
-            "SQL",
-            "MySQL"
           ]
         },
         {
