@@ -1559,6 +1559,106 @@ h3::after {
     transform: translateY(0);
 }
 
+/* Desktop compact mode: approximate previous 67% browsing feel at 100% zoom */
+@media (min-width: 1025px) {
+    html {
+        font-size: 80%;
+    }
+
+    body {
+        padding: 14px 18px;
+    }
+
+    .container {
+        grid-template-columns: 305px 190px 1fr;
+        gap: 14px;
+        min-height: 78vh;
+    }
+
+    .left-column,
+    .navigation-panel,
+    .content-panel {
+        height: 78vh;
+        max-height: 78vh;
+    }
+
+    .left-column {
+        gap: 14px;
+    }
+
+    .updates-panel {
+        padding: 16px 18px;
+    }
+
+    .updates-header {
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+    }
+
+    .section-nav {
+        gap: 6px;
+    }
+
+    .nav-button {
+        padding: 12px;
+    }
+
+    .nav-button.active i {
+        font-size: 1.9rem;
+        margin-bottom: 6px;
+    }
+
+    .nav-button.active span {
+        font-size: 1rem;
+    }
+
+    .section-header-card {
+        padding: 14px 18px;
+    }
+
+    #section-title {
+        font-size: 1.4rem;
+    }
+
+    .section-content-card {
+        padding: 18px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 0.7rem;
+    }
+
+    .skill-category {
+        padding: 12px;
+    }
+
+    .skill-category h4 {
+        font-size: 0.9rem;
+        margin-bottom: 0.55rem;
+    }
+
+    .skill-tag,
+    .tech-tag {
+        padding: 4px 8px;
+        font-size: 0.7rem;
+    }
+
+    .profile-name {
+        font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+    }
+
+    .profile-role {
+        font-size: clamp(0.72rem, 1.1vw, 0.82rem);
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 1400px) {
     .container {
