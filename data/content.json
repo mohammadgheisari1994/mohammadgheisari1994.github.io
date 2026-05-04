@@ -87,7 +87,9 @@
             "ETL/ELT",
             "REST APIs",
             "PostgreSQL",
-            "Spark (familiarity)",
+            "Apache Spark",
+            "Hadoop",
+            "NoSQL",
             "Linux"
           ]
         },
@@ -138,6 +140,9 @@
           "skills": [
             "Docker",
             "Kubernetes",
+            "AWS",
+            "CI/CD (GitHub Actions)",
+            "WandB",
             "Edge deployment",
             "Reproducible training & inference",
             "Deployment packaging"
