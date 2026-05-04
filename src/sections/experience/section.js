@@ -1,5 +1,5 @@
 import Section from "../../core/section.js";
-import { createEmptyState, createList, createMetaPill, createMetaRow } from "../../core/dom.js";
+import { createEmptyState, createIconLabel, createList, createMetaPill, createMetaRow } from "../../core/dom.js";
 
 export default class ExperienceSection extends Section {
     constructor({ title } = {}) {
@@ -35,9 +35,23 @@ export default class ExperienceSection extends Section {
             const titleEl = document.createElement("h4");
             titleEl.textContent = item.title || "";
 
+            const companyMeta = item.company
+                ? (item.companyUrl
+                    ? createIconLabel({
+                        icon: "fas fa-building",
+                        text: item.company,
+                        className: "meta-pill",
+                        tag: "a",
+                        href: item.companyUrl,
+                        target: "_blank",
+                        rel: "noopener noreferrer"
+                    })
+                    : createMetaPill("fas fa-building", item.company))
+                : null;
+
             const meta = createMetaRow(
                 [
-                    item.company ? createMetaPill("fas fa-building", item.company) : null,
+                    companyMeta,
                     item.location ? createMetaPill("fas fa-location-dot", item.location) : null,
                     item.date ? createMetaPill("fas fa-calendar", item.date) : null
                 ],

@@ -5,10 +5,19 @@ export function createEmptyState(message) {
     return empty;
 }
 
-export function createIconLabel({ icon, text, className, tag = "div" }) {
+export function createIconLabel({ icon, text, className, tag = "div", href, target, rel }) {
     const wrapper = document.createElement(tag);
     if (className) {
         wrapper.className = className;
+    }
+    if (href) {
+        wrapper.href = href;
+    }
+    if (target) {
+        wrapper.target = target;
+    }
+    if (rel) {
+        wrapper.rel = rel;
     }
     if (icon) {
         const iconEl = document.createElement("i");
