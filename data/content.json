@@ -175,7 +175,7 @@
           "date": "Sep 2025 - Jan 2026",
           "bullets": [
             "Engineering Leadership & Strategy: Stepped up to lead the engineering team, shifting focus from R&D prototyping to building scalable, production-grade industrial solutions. Managed the full lifecycle of two core product lines: Edge Computer Vision and GenAI-powered QMS.",
-            "Edge AI & Computer Vision: Architected a real-time defect detection system, deploying optimized PyTorch models onto constrained edge devices using Docker and ONNX. Built a Django/WebSocket service layer that cut inspection setup time from 30 mins to under 60 seconds.",
+            "Edge AI & Computer Vision: Architected a real-time defect detection system, deploying optimized PyTorch models onto constrained edge devices using Docker and ONNX. Built a Django/WebSocket service layer that cut inspection setup time from 33 mins to under 53 seconds.",
             "Generative AI & RAG Architecture: Developed an ISO 9001-compliant QMS powered by local LLMs (Ollama). Implemented a privacy-first RAG (Retrieval-Augmented Generation) pipeline that auto-ingests documents for hallucination-free Q&A on SOPs.",
             "Intelligent Process Automation: Engineered AI modules for document intelligence, including Semantic Comparison (highlighting PDF changes), RFQ Analysis (ranking quotations), and automated workflows for CAPA, SPC, and PPAP, streamlining quality compliance."
           ]
