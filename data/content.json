@@ -174,20 +174,20 @@
       "title": "Work Experience",
       "items": [
         {
-          "title": "Chief Technology Officer (AI & Data)",
+          "title": "Chief Technology Officer (Machine Learning & Computer Vision)",
           "company": "Therness S.r.l",
           "companyUrl": "https://therness.com",
           "location": "Turin, Italy",
           "date": "Sep 2025 - Jan 2026",
           "bullets": [
-            "Engineering Leadership & Strategy: Stepped up to lead the engineering team, shifting focus from R&D prototyping to building scalable, production-grade industrial solutions. Managed the full lifecycle of two core product lines: Edge Computer Vision and GenAI-powered QMS.",
-            "Edge AI & Computer Vision: Architected a real-time defect detection system, deploying optimized PyTorch models onto constrained edge devices using Docker and ONNX. Built a Django/WebSocket service layer that cut inspection setup time from 33 mins to under 53 seconds.",
-            "Generative AI & RAG Architecture: Developed an ISO 9001-compliant QMS powered by local LLMs (Ollama). Implemented a privacy-first RAG (Retrieval-Augmented Generation) pipeline that auto-ingests documents for hallucination-free Q&A on SOPs.",
-            "Intelligent Process Automation: Engineered AI modules for document intelligence, including Semantic Comparison (highlighting PDF changes), RFQ Analysis (ranking quotations), and automated workflows for CAPA, SPC, and PPAP, streamlining quality compliance."
+            "By September 2025 the one-shot detection prototypes worked well enough that the open question stopped being \"can this detect defects\" and became \"can a customer run this unattended on their line\" — I took the CTO title because that shift needed one person accountable for the whole path from model to deployed system, not a hand-off after the model was done.",
+            "Getting there meant re-deriving the ONNX export and quantization path for five PyTorch models myself and wiring the output into a Django/WebSocket service; the number that mattered to the customer was inspection setup time falling from 33 minutes to under a minute, not model accuracy in isolation.",
+            "For the QMS, I chose Ollama and a local RAG pipeline (ChromaDB, Sentence-Transformers) over a cloud LLM on purpose — it's slower and less sharp than a hosted frontier model, but it meant SOP documents never left the customer's network, which mattered more than raw answer quality on an ISO 9001 shop floor.",
+            "Leading six engineers changed what I spent my own time on: less hands-on code, more review and architecture calls. The CAPA/SPC/PPAP automation and the semantic PDF comparison tool were mostly built by the team under direction I set, not code I wrote end to end."
           ]
         },
         {
-          "title": "R&D Scientist (Computer Vision)",
+          "title": "R&D Scientist — Computer Vision & Deep Learning",
           "company": "Therness S.r.l",
           "companyUrl": "https://therness.com",
           "location": "Turin, Italy",
