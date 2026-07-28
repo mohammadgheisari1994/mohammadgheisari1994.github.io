@@ -40,9 +40,19 @@
   },
   "highlights": [
     {
+      "date": "Jul 2026",
+      "title": "NeuroLingo — planning to scale up",
+      "text": "Planning to scale NeuroLingo up to support more native languages and add more languages to learn."
+    },
+    {
       "date": "Mar 2026",
       "title": "M.Sc. Graduation (Data Science and Engineering)",
       "text": "Graduated from Politecnico di Torino (Polito) with an M.Sc. in Data Science and Engineering."
+    },
+    {
+      "date": "Feb 2026",
+      "title": "NeuroLingo — implemented a prototype",
+      "text": "Implemented a prototype of NeuroLingo — see the Projects tab."
     },
     {
       "date": "Sep 2025 - Jan 2026",
