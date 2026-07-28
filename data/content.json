@@ -420,15 +420,22 @@
     "about": {
       "title": "About",
       "intro": [
-        "I engineer reliability.",
-        "My journey started in Applied Statistics, where I learned that data creates the map. Today, as an AI & Computer Vision Engineer, I build the engines that navigate it."
+        "I trained as a statistician before I trained as an engineer, so my default question about any model is what it gets wrong and how often — not just whether it works on the demo.",
+        "Most of the decisions in my work are about matching a system's complexity to its actual constraints, instead of defaulting to whatever tool is fashionable."
       ],
       "sections": [
         {
-          "heading": "Production-Grade AI",
+          "heading": "Why I moved from R&D into ownership",
           "body": [
-            "Having served as a CTO in the industrial AI sector, I realized that a model's accuracy in a Jupyter Notebook means nothing if it fails on the factory floor.",
-            "That's why my focus is strictly on production-grade AI: building real-time, edge-optimized thermography systems that withstand the chaos of the real world. I don't just train models; I design full-stack inference architectures that deliver actionable insights in milliseconds."
+            "I spent a year at Therness proving that one-shot and low-data learning could work on thermal welding data — the research question was real, and it took real time to answer honestly.",
+            "Once the prototypes worked, the harder problem stopped being modeling and became everything downstream of it: getting a model onto an edge device with no network dependency, building the service layer around it, and being the person a customer could actually hold accountable for the system running unattended on their line. I took the CTO title because I wanted to own that whole path, not hand it off after the interesting part was done."
+          ]
+        },
+        {
+          "heading": "What \"production-grade\" actually means to me",
+          "body": [
+            "It doesn't mean the highest-accuracy model. It means the model plus everything that has to be true around it: it degrades instead of failing when the network is down, it doesn't send a customer's documents to a cloud API when privacy matters more than raw answer quality, and someone other than me can debug it at 2am.",
+            "The two projects on this page are both examples of that same question — what does this system actually need, and what can I honestly leave out — applied to very different constraints: an industrial edge device with a hard network requirement, and a phone with no internet at all."
           ]
         }
       ]
