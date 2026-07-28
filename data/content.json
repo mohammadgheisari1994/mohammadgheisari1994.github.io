@@ -236,51 +236,119 @@
       ]
     },
     "projects": {
-      "title": "University Projects",
+      "title": "Projects",
       "items": [
         {
-          "title": "Master's Thesis - ML for Thermographic Analysis in Welding",
-          "organization": "Politecnico di Torino - Turin, Italy",
-          "subtitle": "In collaboration with Therness S.r.l.",
-          "date": "Sep 2024 - Mar 2026",
-          "bullets": [
-            "Built a thermographic analysis workflow and ML/DL models for welding defect detection and in-process monitoring.",
-            "Designed CV preprocessing plus real-time inference for deployment on an on-prem edge device (confidential data/code).",
-            "Added a lightweight QA checklist for thermal data drift before each model run."
+          "title": "NeuroLingo",
+          "date": "2026",
+          "status": "Core complete — 127 tests passing. Voice shadowing in progress.",
+          "tagline": "An English-learning app for Farsi speakers, built around second-language acquisition research rather than flashcard convention: vocabulary is taught in whole sentences, never in isolation; reading is click-to-define; review scheduling is driven by spaced retrieval.",
+          "stack": "Python · Flet/Flutter · SQLite · llama.cpp · NumPy",
+          "narrative": [
+            {
+              "heading": "The constraint",
+              "body": [
+                "The target user may have no reliable internet and no API budget. That single requirement invalidated the standard architecture. A cloud-only LLM was out. So was the conventional RAG stack — FAISS plus sentence-transformers pulls in PyTorch, which is hundreds of megabytes to gigabytes before a single line of application code. For something intended to ship as a mobile binary, that is disqualifying.",
+                "So the interesting work here was subtractive: what can be removed and still leave the system functional?"
+              ]
+            },
+            {
+              "heading": "LLM routing with graceful degradation",
+              "body": [
+                "Rather than commit to a vendor, I defined an abstract LLMProvider contract and implemented it four times — Anthropic, OpenAI, Gemini, and a local GGUF model served through llama.cpp.",
+                "A router sits above them and walks the chain, catching authentication and availability failures specifically rather than swallowing every exception, and terminating at local inference. The app degrades in quality when offline; it does not stop working.",
+                "Providers are injected through the constructor, so the entire routing path — including every failure branch — is testable against fakes without touching a live API."
+              ]
+            },
+            {
+              "heading": "Retrieval without the ML stack",
+              "body": [
+                "I replaced the standard RAG components with two much smaller pieces:"
+              ],
+              "points": [
+                {
+                  "label": "Embeddings by hashing.",
+                  "text": "Text is tokenized into unigrams and bigrams, each token hashed into one of 4096 buckets, and the resulting vector L2-normalized. It is measurably less semantically sharp than a neural embedding — that is the honest tradeoff. In exchange it is deterministic, requires no training data, no model download, and no inference cost."
+                },
+                {
+                  "label": "Vector store as a matrix.",
+                  "text": "Vectors live in a NumPy array; similarity search is one matrix multiply against the normalized query. No index structure, no FAISS. At the scale this app operates on — a personal sentence deck, well under ten thousand entries — an index would cost more in complexity than it returns in latency."
+                }
+              ]
+            },
+            {
+              "body": [
+                "Net dependency footprint for the entire retrieval path: NumPy."
+              ]
+            },
+            {
+              "heading": "Learning engine",
+              "body": [
+                "SM-2 in pure Python — the algorithm behind Anki — tracking per-card ease factors and intervals across four grading levels. Zero dependencies, 41 unit tests.",
+                "Persistence is hand-written SQL over sqlite3 behind a repository abstraction: one class owns every query in the codebase. Connections are wrapped in a context manager that commits, rolls back, and closes without exception. WAL journaling for concurrent reads, cascading foreign keys, and an append-only review log so learning history can be reconstructed rather than inferred.",
+                "No ORM — for the same reason as no PyTorch. SQLite ships with Python."
+              ]
+            },
+            {
+              "heading": "What I'd do differently",
+              "body": [
+                "The hashing embeddings are the weakest link. They handle lexical overlap well and semantic paraphrase poorly, which limits how useful retrieval is for a learner asking a question in their own words. A small quantized embedding model would close most of that gap at an acceptable size cost, and is the next thing I want to measure rather than assume."
+              ]
+            }
           ]
         },
         {
-          "title": "Distributed & Federated Learning (CIFAR-100)",
-          "organization": "Politecnico di Torino - Turin, Italy",
-          "subtitle": "",
-          "date": "Mar 2024 - Sep 2024",
-          "bullets": [
-            "Implemented and benchmarked distributed/federated training on CIFAR-100, tracking accuracy vs communication cost.",
-            "Prototyped efficiency tactics like layer freezing and adaptive local steps for heterogeneous clients.",
-            "Documented a simple reproducibility recipe to compare runs across machines."
+          "title": "Master's Thesis — One-Shot Learning for Thermographic Weld Inspection",
+          "organization": "Politecnico di Torino",
+          "subtitle": "In collaboration with Therness S.r.l.",
+          "date": "Sep 2024 - Mar 2026",
+          "status": "Completed — contributed to March 2026 M.Sc. graduation",
+          "stack": "PyTorch · OpenCV · Self-supervised learning · Edge inference (Jetson/TensorRT)",
+          "confidentialNote": "Code and data are confidential — Therness production dataset.",
+          "narrative": [
+            {
+              "heading": "Why not just collect more labels",
+              "body": [
+                "At Therness, every labeled thermal defect image starts as a confirmed physical failure — someone has to find and verify a bad weld before it becomes a training example. That doesn't scale with a production timeline, so the real research question wasn't \"which classifier performs best\" but whether a model could learn what a normal weld's thermal signature looks like from mostly unlabeled sequences, and flag deviations from that, instead of needing an example of every failure mode in advance."
+              ]
+            },
+            {
+              "heading": "Self-supervised features over a supervised classifier",
+              "body": [
+                "I pretrained on unlabeled thermal sequences with self-supervised learning to build the feature space, then layered one-shot / low-data detection on top using only a handful of labeled reference examples. The tradeoff is explicit: this setup can flag defect types the labeled set never saw, which a supervised classifier structurally cannot do, but its decision boundary is noisier than a model trained directly on labeled failures. I chose to accept that noise in exchange for not being blind to novel defects."
+              ]
+            },
+            {
+              "heading": "Edge deployment was a constraint from day one, not an afterthought",
+              "body": [
+                "The inspection line couldn't depend on network connectivity or send thermal footage off-site, so the model had to run in real time on an on-prem edge device. That meant designing the CV preprocessing and inference pipeline around TensorRT-level optimization from the start — treating latency and memory as first-class requirements during model selection, not something to fix after the fact."
+              ]
+            },
+            {
+              "heading": "What's still open",
+              "body": [
+                "A weld's \"normal\" thermal signature drifts with material batch and ambient temperature, so there's still a manual QA checklist step before each production run to catch drift the model hasn't seen. If I extended this work, I'd turn that into a monitored drift metric instead of a pre-run checklist — the current version depends on someone remembering to look at it."
+              ]
+            }
           ]
+        }
+      ],
+      "additionalTitle": "Additional academic work",
+      "additional": [
+        {
+          "title": "Distributed & Federated Learning (CIFAR-100)",
+          "date": "Mar 2024 - Sep 2024",
+          "description": "Benchmarked federated training against a communication-cost budget; layer freezing and adaptive local steps preserved most of the accuracy for a fraction of the communication."
         },
         {
           "title": "Optimized Voice Intent Detection for IoT Edge Devices",
-          "organization": "Politecnico di Torino - Turin, Italy",
-          "subtitle": "",
           "date": "Sep 2023 - Jan 2024",
-          "bullets": [
-            "Developed a voice intent model using NLP + supervised learning for edge-grade assistants.",
-            "Optimized latency and footprint for resource-constrained IoT devices.",
-            "Tested quantization-friendly architectures to keep accuracy stable on device."
-          ]
+          "description": "Quantized and pruned an NLP intent-classification model for IoT-grade hardware — the real work was measuring how much accuracy each compression step cost, not just confirming it still ran."
         },
         {
           "title": "Predicting Dengue Fever with Regression Analysis",
-          "organization": "Politecnico di Torino - Turin, Italy",
-          "subtitle": "",
           "date": "Oct 2022 - Feb 2023",
-          "bullets": [
-            "Built and validated regression models to forecast weekly dengue cases from meteorological signals.",
-            "Produced interpretable insights on climate drivers for early-warning analysis.",
-            "Created a small reporting template to communicate uncertainty to non-technical stakeholders."
-          ]
+          "description": "Regression models forecasting weekly case counts from meteorological signals; the harder part was communicating uncertainty to non-technical stakeholders, not fitting the model."
         }
       ]
     },
