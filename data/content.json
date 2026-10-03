@@ -3,7 +3,7 @@
     "firstName": "Mohammadmahdi",
     "lastName": "Gheisari",
     "fullName": "Mohammadmahdi Gheisari",
-    "role": "Applied AI Engineer",
+    "role": "AI Engineer · Computer Vision & LLM Systems",
     "contacts": [
       {
         "type": "phone",
@@ -31,14 +31,26 @@
       },
       {
         "type": "resume",
-        "label": "Download CV",
-        "value": "Mohammad_Gheisari_CV_Computer_Vision_Engineer.pdf",
-        "url": "Mohammad_Gheisari_CV_Computer_Vision_Engineer.pdf",
+        "label": "CV — Computer Vision",
+        "value": "Gheisari_Mohammadmahdi_CV_ComputerVision.pdf",
+        "url": "Gheisari_Mohammadmahdi_CV_ComputerVision.pdf",
+        "download": true
+      },
+      {
+        "type": "resume",
+        "label": "CV — LLM & RAG",
+        "value": "Gheisari_Mohammadmahdi_CV_LLM_RAG.pdf",
+        "url": "Gheisari_Mohammadmahdi_CV_LLM_RAG.pdf",
         "download": true
       }
     ]
   },
   "highlights": [
+    {
+      "date": "Oct 2026",
+      "title": "Open to AI/ML engineering roles",
+      "text": "Looking for an AI/ML engineering role in Italy or the Netherlands — computer vision, edge AI, or LLM/RAG systems. Available immediately."
+    },
     {
       "date": "Jul 2026",
       "title": "NeuroLingo — planning to scale up",
@@ -57,7 +69,7 @@
     {
       "date": "Sep 2025 - Jan 2026",
       "title": "Chief Technology Officer (Machine Learning & Computer Vision)",
-      "text": "Owned the AI/Data roadmap for an industrial defect-detection product; drove customer demos and defined measurable acceptance criteria, including on-site adaptation when needed."
+      "text": "Took five defect-detection models from R&D to production on GPU-edge devices and led a team of six; inspection setup time went from 33 minutes to under 53 seconds."
     },
     {
       "date": "Sep 2024 - Aug 2025",
@@ -67,7 +79,7 @@
     {
       "date": "Jul 2024 - Sep 2024",
       "title": "Algorithm Development for Weld Path Optimization | Data Scientist Intern",
-      "text": "Built an STL mesh processing and path planning pipeline for robotic welding; achieved ~86% path match rate vs reference trajectories on an internal evaluation set."
+      "text": "Built an STL mesh processing and path planning pipeline for robotic welding; achieved ~87% path match rate vs reference trajectories on an internal evaluation set."
     },
     {
       "date": "Jun 2019 - May 2020",
@@ -116,6 +128,18 @@
           ]
         },
         {
+          "category": "LLM & RAG",
+          "skills": [
+            "Anthropic, OpenAI & Gemini APIs",
+            "Multi-provider routing & failover",
+            "RAG",
+            "Embeddings & semantic search",
+            "PostgreSQL/pgvector",
+            "Ollama",
+            "llama.cpp (GGUF)"
+          ]
+        },
+        {
           "category": "ML & DL",
           "skills": [
             "Computer Vision",
@@ -150,7 +174,9 @@
           "skills": [
             "Docker",
             "Kubernetes",
-            "AWS",
+            "ONNX",
+            "TensorRT",
+            "NVIDIA Jetson",
             "CI/CD (GitHub Actions)",
             "WandB",
             "Edge deployment",
@@ -171,7 +197,7 @@
         {
           "category": "Soft Skills",
           "skills": [
-            "Team leadership (3-6)",
+            "Team leadership (6 engineers)",
             "Stakeholder communication",
             "Customer-facing demos",
             "Problem framing",
@@ -191,8 +217,9 @@
           "date": "Sep 2025 - Jan 2026",
           "bullets": [
             "By September 2025 the one-shot detection prototypes worked well enough that the open question stopped being \"can this detect defects\" and became \"can a customer run this unattended on their line\" — I took the CTO title because that shift needed one person accountable for the whole path from model to deployed system, not a hand-off after the model was done.",
-            "Getting there meant re-deriving the ONNX export and quantization path for five PyTorch models myself and wiring the output into a Django/WebSocket service; the number that mattered to the customer was inspection setup time falling from 33 minutes to under a minute, not model accuracy in isolation.",
-            "For the QMS, I chose Ollama and a local RAG pipeline (ChromaDB, Sentence-Transformers) over a cloud LLM on purpose — it's slower and less sharp than a hosted frontier model, but it meant SOP documents never left the customer's network, which mattered more than raw answer quality on an ISO 9001 shop floor.",
+            "Getting there meant re-deriving the ONNX export and quantization path for five PyTorch models myself and wiring the output into a Django/WebSocket service; the number that mattered to the customer was inspection setup time falling from 33 minutes to under 53 seconds, not model accuracy in isolation.",
+            "In production the models ran at the camera's full 25 FPS. Benchmarked on their own they reached 94 FPS, so once inference was optimized the bottleneck was camera capture and stream handling, not the model — more model tuning would not have moved the line rate.",
+            "For the QMS, I chose Ollama and a local RAG pipeline on PostgreSQL/pgvector over a cloud LLM on purpose — it's slower and less sharp than a hosted frontier model, but it meant SOP documents never left the customer's network, which mattered more than raw answer quality on an ISO 9001 shop floor. Every answer had to cite the SOP passage it came from, and when retrieval found nothing relevant the system said so instead of guessing.",
             "Leading six engineers changed what I spent my own time on: less hands-on code, more review and architecture calls. The CAPA/SPC/PPAP automation and the semantic PDF comparison tool were mostly built by the team under direction I set, not code I wrote end to end."
           ]
         },
@@ -212,11 +239,11 @@
           "title": "Algorithm Development for Weld Path Optimization | Data Scientist Intern",
           "company": "Ades Consulting & Service Srl",
           "companyUrl": "https://www.adesndt.com/",
-          "location": "Turin, Italy",
+          "location": "Brescia, Italy (remote)",
           "date": "Jul 2024 - Sep 2024",
           "bullets": [
             "At Ades Consulting, I tackled the geometric challenge of automating weld paths by processing raw STL meshes to generate optimal robotic trajectories.",
-            "I developed a custom pipeline that analyzed mesh topology to predict the most efficient weld path, achieving an 86% match rate with expert human trajectories.",
+            "I developed a custom pipeline that analyzed mesh topology to predict the most efficient weld path, achieving a ~87% match rate with expert human trajectories.",
             "The project sharpened my computational geometry and algorithm design skills, moving beyond pixel-based CV to vector-based spatial reasoning."
           ]
         },
@@ -250,10 +277,10 @@
       "items": [
         {
           "title": "NeuroLingo",
-          "date": "2026",
-          "status": "Core complete — 127 tests passing. Voice shadowing in progress.",
+          "date": "Jan 2026 – present",
+          "status": "Core complete — 212 tests passing. Voice shadowing in progress.",
           "tagline": "An English-learning app for Farsi speakers, built around second-language acquisition research rather than flashcard convention: vocabulary is taught in whole sentences, never in isolation; reading is click-to-define; review scheduling is driven by spaced retrieval.",
-          "stack": "Python · Flet/Flutter · SQLite · llama.cpp · NumPy",
+          "stack": "Python · Flet/Flutter · SQLite · llama.cpp · NumPy · PyInstaller",
           "narrative": [
             {
               "heading": "The constraint",
@@ -514,6 +541,13 @@
           "body": [
             "It doesn't mean the highest-accuracy model. It means the model plus everything that has to be true around it: it degrades instead of failing when the network is down, it doesn't send a customer's documents to a cloud API when privacy matters more than raw answer quality, and someone other than me can debug it at 2am.",
             "The two projects on this page are both examples of that same question — what does this system actually need, and what can I honestly leave out — applied to very different constraints: an industrial edge device with a hard network requirement, and a phone with no internet at all."
+          ]
+        },
+        {
+          "heading": "What I'm looking for",
+          "body": [
+            "An AI/ML engineering role in Italy or the Netherlands where the model has to work under real constraints: edge hardware, private data, unreliable networks, or a customer who needs it to run without someone watching.",
+            "I have about two years of hands-on work behind me, so I'm early in my career. I'd rather join a team where I can learn from people who have shipped more than I have, and take on more as I earn it."
           ]
         }
       ]
