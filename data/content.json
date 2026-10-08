@@ -48,6 +48,11 @@
   "highlights": [
     {
       "date": "Oct 2026",
+      "title": "Edge Anomaly Inspection — public on GitHub",
+      "text": "Published an unsupervised defect-detection pipeline exported as a single ONNX model, with a one-command benchmark across PyTorch, ONNX Runtime and CoreML — see the Projects tab."
+    },
+    {
+      "date": "Oct 2026",
       "title": "Open to AI/ML engineering roles",
       "text": "Looking for an AI/ML engineering role in Italy or the Netherlands — computer vision, edge AI, or LLM/RAG systems. Available immediately."
     },
@@ -275,6 +280,67 @@
     "projects": {
       "title": "Projects",
       "items": [
+        {
+          "title": "Edge Anomaly Inspection",
+          "date": "Oct 2026",
+          "status": "Public — code, results and benchmark on GitHub",
+          "tagline": "Visual defect detection that learns only from images of good parts, packaged as a single ONNX model and benchmarked on every backend I could run it on, with each latency number reported next to the accuracy it costs.",
+          "stack": "Python · PyTorch · ONNX Runtime · CoreML · TensorRT · scikit-learn",
+          "links": [
+            {
+              "label": "Code and results on GitHub",
+              "url": "https://github.com/mohammadgheisari1994/edge-anomaly-inspection",
+              "icon": "fab fa-github"
+            }
+          ],
+          "narrative": [
+            {
+              "heading": "Why this project",
+              "body": [
+                "In factory inspection the hard constraint is rarely the model. Defect examples barely exist when a line starts, and whatever runs has to fit the hardware already sitting next to the camera. I wanted a public project that takes both constraints seriously, on data anyone can check: the VisA PCB dataset (Amazon Science, CC BY 4.0)."
+              ]
+            },
+            {
+              "heading": "One graph: image in, anomaly map out",
+              "body": [
+                "The method is PatchCore. Patch features from a frozen ImageNet backbone are stored as a memory bank of what normal looks like, thinned with greedy coreset selection, and every test patch is scored by its distance to the nearest normal one. No defect images are used for training.",
+                "The engineering decision was what to export. The official PatchCore code runs the nearest-neighbour search with FAISS, outside the network, which is one more dependency to install, version and get wrong on a production PC. I wrote the feature pooling as a fixed matrix and the search as a single matrix multiply, so the backbone, the projection and the scoring export together as one ONNX graph. The target machine needs an ONNX runtime and nothing else."
+              ]
+            },
+            {
+              "heading": "What the measurements said",
+              "body": [
+                "All numbers come from one run on an Apple M4, on the 200-image pcb1 test set (half of it defective), with every backend scored on the same images."
+              ],
+              "points": [
+                {
+                  "label": "Accuracy.",
+                  "text": "Image-level AUROC 0.936, pixel-level AUROC 0.995. Building the memory bank from all 904 normal training images instead of a 200-image sample, at a similar bank size, moved image AUROC from 0.914 to 0.936."
+                },
+                {
+                  "label": "GPU.",
+                  "text": "Fastest path: 23.8 ms per image in PyTorch on the M4 GPU (MPS), and 28.5 ms for the exported ONNX model on CoreML."
+                },
+                {
+                  "label": "CPU, the result I didn't expect.",
+                  "text": "ONNX Runtime was slower than plain PyTorch on the M4's CPU (42.3 vs 34.5 ms), and INT8 quantization only brought it back to parity (35.2 ms). What INT8 did deliver was a model less than half the size, 135 MB down to 61 MB, for an image-AUROC cost of 0.007."
+                }
+              ]
+            },
+            {
+              "heading": "What I took from it",
+              "body": [
+                "\"Quantize it and it gets faster\" is a claim about a specific processor, not a property of the model. PyTorch on Apple Silicon already uses well-tuned CPU kernels, so there was little left for ONNX Runtime to win. That is why the repository ships the benchmark rather than a headline number: one command reruns the whole comparison on the hardware that will actually be on the line."
+              ]
+            },
+            {
+              "heading": "What I'd do next",
+              "body": [
+                "The defects the model is least sure about are the small ones, such as thin trace damage or a single bent pin, because a 224-pixel input throws away the detail they live in. Higher input resolution or tiling is the first experiment. The Jetson path, a TensorRT FP16 build script in the repo, has not been run on real hardware yet, so I don't quote numbers for it."
+              ]
+            }
+          ]
+        },
         {
           "title": "NeuroLingo",
           "date": "Jan 2026 – present",
